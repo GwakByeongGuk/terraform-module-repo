@@ -18,7 +18,7 @@ resource "aws_instance" "this" {
     Name = var.instance_name
   }
 
-  # ${path.module} : main.tf의 현재 경로
-  user_data = filebase64("${path.module}/user_data.sh")
+  # user_data 모듈 참조
+  user_data = var.user_data
 
 }

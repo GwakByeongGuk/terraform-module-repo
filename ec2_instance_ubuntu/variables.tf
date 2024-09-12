@@ -22,3 +22,8 @@ variable "security_group_id" {
   description = "id for assign to instance"
   type = string
 }
+
+variable "user_data" {
+  description = "user script to execute"
+  type = string
+}
